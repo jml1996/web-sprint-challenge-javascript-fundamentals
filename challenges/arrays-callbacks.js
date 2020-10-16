@@ -25,7 +25,7 @@ and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: 
 
 const displayNames = [];
 
-function bothNames (data){
+function bothNames(data){
   data.forEach((animal) => {
     displayNames.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}`)
   });
@@ -44,7 +44,7 @@ strings named lowCaseAnimalNames, each string following this pattern: "jackal, a
 
 const lowCaseAnimalNames = [];
 
-function animalNamesToLower (data){
+function animalNamesToLower(data){
   data.map((animal) => {
     let nameLower = animal.animal_name.toLowerCase();
     lowCaseAnimalNames.push(nameLower);
@@ -64,7 +64,7 @@ which contains only the animals with a population less than 5.
 
 const lowPopulationAnimals = [];
 
-function populationChecker (data) {
+function populationChecker(data) {
   data.filter((animal) => {
     if (animal.population < 5){
       lowPopulationAnimals.push(animal);
@@ -84,7 +84,7 @@ the .reduce() method. Remember the reduce method takes two arguments: a callback
 */
 let populationTotal = 0;
 
-function findTotal (data){
+function findTotal(data){
   populationTotal = data.reduce((acc, animal) => {
     return acc + animal.population;
   }, 0);
@@ -104,7 +104,7 @@ console.log(populationTotal);
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
-function consume (a, b, cb){
+function consume(a, b, cb){
   return cb(a, b);
 }
 
@@ -115,15 +115,15 @@ function consume (a, b, cb){
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-function add (a, b){
+function add(a, b){
   return a + b;
 }
 
-function multiply (a, b){
+function multiply(a, b){
   return a * b;
 }
 
-function greeting (first, last){
+function greeting(first, last){
   return `Hello ${first} ${last}, nice to meet you!`;
 }
 
